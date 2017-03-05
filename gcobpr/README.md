@@ -21,7 +21,7 @@ NOTE: Right now the argument handling isn't very robust. If you give it two argu
 
 1. `git checkout -b new-branch`
 1. `git commit --allow-empty -m "message for initial commit and pr description"`
-1. `git push origin $1`
+1. `git push origin new-branch`
 1. `hub pull-request -m "message for initial commit and pr description"`
 1. `git branch --set-upstream-to=origin/$(current_branch)`
 
