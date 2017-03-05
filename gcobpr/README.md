@@ -17,7 +17,7 @@ It also sets upstream for the new branch so that you can just use `git pull` or 
 NOTE: Right now the argument handling isn't very robust. If you give it two arguments it will try to execute everything. I don't THINK this can get you in too much trouble, but beware.
 
 ##Execution Details
-`gcobpr` will run the following commands in this order:
+`gcobpr new-branch "message for initial commit and pr description"` will run the following commands in this order:
 
 1. `git checkout -b new-branch`
 2. `git branch --set-upstream-to=origin/$(current_branch)`
