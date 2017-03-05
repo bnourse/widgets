@@ -20,10 +20,10 @@ NOTE: Right now the argument handling isn't very robust. If you give it two argu
 `gcobpr new-branch "message for initial commit and pr description"` will run the following commands in this order:
 
 1. `git checkout -b new-branch`
-2. `git branch --set-upstream-to=origin/$(current_branch)`
-3. `git commit --allow-empty -m "message for initial commit and pr description"`
-4. `git push`
-5. `hub pull-request -m "message for initial commit and pr description"`
+1. `git commit --allow-empty -m "message for initial commit and pr description"`
+1. `git push origin $1`
+1. `hub pull-request -m "message for initial commit and pr description"`
+1. `git branch --set-upstream-to=origin/$(current_branch)`
 
 ##Installation
 1. Clone/copy the contents into `~/.oh-my-zsh/custom`. The file name and sub-folder structure shouldn't matter as long as the function winds up in a file with a `.zsh` extension.
